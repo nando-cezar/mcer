@@ -1,1 +1,36 @@
 services:
+  postgres:
+    container_name: postgres
+    image: postgres:17
+    restart: always
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: root
+      POSTGRES_DB: mcer_db
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    networks:
+      - app-network
+
+  mcer_server:
+    container_name: mcer_server
+    build:
+      context: .
+      dockerfile: Dockerfile
+    depends_on:
+      - postgres
+    env_file:
+      - .env-dockerfile
+    ports:
+      - "8080:8080"
+    networks:
+      - app-network
+ 
+networks:
+  app-network:
+    driver: bridge
+
+volumes:
+  postgres_data:

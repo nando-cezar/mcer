@@ -1,0 +1,6 @@
+# DOCKER COMPOSE
+docker-compose up --build
+
+# DOCKER PUBLISH
+docker build -t nandocezar/mcer-backend:v1 .
+docker push nandocezar/mcer-backend:v1
