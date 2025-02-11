@@ -9,7 +9,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
 class BackendApplicationTests {
-    /*
+
     @Test
     void testCreateHistoryLocationWithBuilder(){
 
@@ -18,14 +18,14 @@ class BackendApplicationTests {
         historyLocationBuilder.createNewInstance();
 
         HistoryLocation historyLocation = historyLocationBuilder.withLatitude(10.0);
-        Assertions.assertEquals(historyLocation.getLatitude(), 10.0);
+        Assertions.assertEquals(10.0, historyLocation.getLatitude());
 
         historyLocation = historyLocationBuilder.withLongitude(20.0);
-        Assertions.assertEquals(historyLocation.getLongitude(), 20.0);
+        Assertions.assertEquals(20.0, historyLocation.getLongitude());
 
         historyLocation = historyLocationBuilder.withDescription("My First Location");
-        Assertions.assertEquals(historyLocation.getDescription(), "My First Location");
+        Assertions.assertEquals("My First Location", historyLocation.getDescription());
 
     }
-*/
+
 }

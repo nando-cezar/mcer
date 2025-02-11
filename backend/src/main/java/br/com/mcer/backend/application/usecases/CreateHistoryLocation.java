@@ -11,7 +11,7 @@ public class CreateHistoryLocation {
         this.repository = repository;
     }
 
-    public HistoryLocation save(HistoryLocation usuario) {
-        return repository.save(usuario);
+    public HistoryLocation save(HistoryLocation historyLocation) {
+        return repository.save(historyLocation);
     }
 }

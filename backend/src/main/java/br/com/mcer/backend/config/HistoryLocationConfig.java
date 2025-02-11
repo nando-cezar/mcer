@@ -23,12 +23,12 @@ public class HistoryLocationConfig {
     }
 
     @Bean
-    HistoryLocationJpaImpl createHistoryLocationJpa(HistoryLocationJpaRepository repository, HistoryLocationMapper mapper){
+    HistoryLocationJpaImpl historyLocationJpaImpl(HistoryLocationJpaRepository repository, HistoryLocationMapper mapper){
         return new HistoryLocationJpaImpl(repository, mapper);
     }
 
     @Bean
-    HistoryLocationMapper createHistoryLocationMapper(){
+    HistoryLocationMapper historyLocationMapper(){
         return new HistoryLocationMapper();
     }
 
